@@ -1,0 +1,1500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@import "./Components/Header/Header.scss";
+@import "./Components/Main/Home/Home.scss";
+@import "./Components/Main/We/We.scss";
+@import "./Components/Main/Programs/Programs.scss";
+@import "./Components/Main/Price/Price.scss";
+@import "./Components/Main/Benefit/Benefit.scss";
+@import "./Components/Main/Companye/Companye.scss";
+@import "./Components/Footer/Footer.scss";
+@import "./Components/Main/Cotegory/SimpleModal/SimpleModal.scss";
+@import "./Components/Main/Treners/Treners.scss";
+@import "./Components/Main/Cotegory/Sports.scss";
+@import "./Components/Main/Cotegory/Mma/Mma.scss";
+@import "./Components/Main/Follow/Follow.scss";
+@import "./Components/Main/New/New.scss";
+
+
+@import './Components/Admin/AdminPage/scss/AddClient.scss';
+@import './Components/Admin/AdminPage/scss/ClientsTable.scss';
+@import './Components/Admin/AdminPage/scss/ClientUpdate.scss';
+@import './Components/Admin/AdminPage/scss/ClientFilter.scss';
+@import './Components/Admin/AdminPage/scss/AdminManager.scss';
+@import './Components/Admin/AdminPage/scss/ClientIncome.scss';
+@import './Components/Admin/AdminPage/scss/AdminPanel.scss';
+@import './Components/Admin/AdminPage/scss/ProductsList.scss';
+@import './Components/Admin/AdminPage/scss/ProductTabs.scss';
+@import './Components/Admin/AdminPage/scss/TrainerAnalytics.scss';
+@import './Components/Admin/AdminPage/scss/AddProduct.scss';
+@import './Components/Admin/AdminPage/scss/ProductSell.scss';
+@import './Components/Admin/Admin.scss';
+
+
+.treners__btn {
+  border: none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 16px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+}
+
+.treners__btn:hover {
+  background: rgb(255, 0, 0);
+}
+
+.swiper {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__nav-logo {
+    width: 10%;
+  }
+
+  .header__nav-list-subtitle {
+    font-size: 120%;
+  }
+
+  .home__form-title {
+    font-size: 290%;
+  }
+
+  .we__whys-whyone-trener {
+    width: 45%;
+  }
+
+  .we__whys-whytwo-price {
+    width: 29%;
+  }
+
+  .we__whys-whythree-eye {
+    width: 50%;
+  }
+
+  .we__whys-whyone-title {
+    font-size: 93%;
+  }
+
+  .we__whys-whyone-text {
+    font-size: 74%;
+  }
+
+  .we__whys-whytwo-text {
+    font-size: 74%;
+    width: 80%;
+  }
+
+  .we__whys-whythree-text {
+    font-size: 74%;
+  }
+
+  .programs__kids-form-photo {
+    border-radius: 50%;
+    width: 85%;
+  }
+
+  .programs__kids-big-photo {
+    border-radius: 50%;
+    width: 85%;
+  }
+
+  .programs__kids-form-title {
+    font-size: 115%;
+  }
+
+  .programs__kids-form-text {
+    font-size: 105%;
+  }
+
+  .programs__kids-big-text {
+    font-size: 105%;
+  }
+
+  .programs__class-vip-photo {
+    border-radius: 50%;
+    width: 85%;
+  }
+
+  .programs__class-they-photo {
+    border-radius: 50%;
+    width: 85%;
+  }
+
+  .programs__class-vip-title {
+    font-size: 115%;
+  }
+
+  .programs__class-vip-text {
+    font-size: 105%;
+  }
+
+  .programs__class-they-text {
+    font-size: 105%;
+  }
+
+  .benefit__title {
+    font-size: 150%;
+  }
+
+  .benefit__form {
+    gap: 2%;
+  }
+
+  .benefit__form-photo {
+    width: 40%;
+  }
+
+  .benefit__form-text {
+    font-size: 87%;
+  }
+
+  .follow__title {
+    font-family: monospace;
+    font-size: 225%;
+  }
+
+  .follow__net-social {
+    font-size: 230%;
+    margin-top: 10%;
+  }
+
+  .companye__title {
+    font-size: 150%;
+  }
+
+  .companye__text {
+    font-size: 110%;
+  }
+
+  .companye__word {
+    font-size: 98%;
+  }
+
+  .footer__title {
+    font-size: 150%;
+  }
+
+  .footer__contact-adres-photo {
+    width: 40%;
+  }
+
+  .footer__contact-tel-photo {
+    width: 19%;
+  }
+
+  .footer__contact-email-photo {
+    width: 40%;
+  }
+
+  .footer__contact-adres-title {
+    font-size: 115%;
+  }
+
+  .footer__contact-adres-text {
+    width: 120%;
+    font-size: 85%;
+  }
+
+  .footer__contact-tel-text {
+    font-size: 85%;
+  }
+
+  .footer__contact-email-text {
+    font-size: 85%;
+  }
+
+  .sports__species-text {
+    font-size: 93%;
+  }
+
+  .price__group {
+    display: flex;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    padding: 5% 1% 1% 1%;
+    gap: 3%;
+  }
+
+  .price__big {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price__big-photo {
+    width: 80%;
+    border-radius: 11%;
+  }
+
+  .price__big-form-title {
+    display: flex;
+    justify-content: center;
+    font-family: serif;
+    font-size: 110%;
+    text-align: center;
+  }
+
+  .new__form-videos {
+    width: 32%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__nav-logo {
+    width: 9%;
+  }
+
+  .home__form-title {
+    font-size: 250%;
+  }
+
+  .we__title {
+    font-size: 135%;
+  }
+
+  .we__text {
+    font-size: 90%;
+  }
+
+  .we__whys-whyone-title {
+    font-size: 87%;
+  }
+
+  .programs__title {
+    font-size: 150%;
+  }
+
+  .programs__text {
+    font-size: 100%;
+  }
+
+  .programs__kids-form-title {
+    font-size: 115%;
+  }
+
+  .programs__kids-form-text {
+    font-size: 105%;
+  }
+
+  .programs__kids-big-text {
+    font-size: 105%;
+  }
+
+  .programs__class-vip-title {
+    font-size: 115%;
+  }
+
+  .programs__class-vip-text {
+    font-size: 105%;
+  }
+
+  .programs__class-they-text {
+    font-size: 105%;
+  }
+
+  .benefit__title {
+    font-size: 150%;
+  }
+
+  .benefit__text {
+    font-size: 100%;
+  }
+
+  .benefit__form-text {
+    font-size: 80%;
+  }
+
+  .follow__title {
+    font-size: 170%;
+  }
+
+  .companye__title {
+    font-size: 150%;
+  }
+
+  .companye__text {
+    font-size: 100%;
+  }
+
+  .companye__word {
+    font-size: 94%;
+  }
+
+  .footer__title {
+    font-size: 150%;
+  }
+
+  .footer__text {
+    font-size: 90%;
+  }
+
+  .footer__contact {
+    display: flex;
+    padding-top: 2%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer__contact-adres-title {
+    font-size: 105%;
+  }
+
+  .footer__contact-adres-text {
+    width: 120%;
+    font-size: 80%;
+  }
+
+  .footer__contact-tel-text {
+    font-size: 80%;
+  }
+
+  .footer__contact-email-text {
+    font-size: 85%;
+  }
+
+  .sports__species {
+    gap: 2%;
+    flex-wrap: wrap;
+    width: 93%;
+    margin: 0 auto;
+  }
+
+  .mma__info-form-title {
+    text-align: center;
+    font-size: 140%;
+    font-family: sans-serif;
+    padding-top: 1%;
+  }
+
+  .mma__info-form-word {
+    text-align: center;
+    font-size: 105%;
+    font-family: system-ui;
+  }
+
+  .mma__info-mma-title {
+    font-size: 110%;
+    font-family: serif;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 1%;
+  }
+
+  .mma__info-quote-photo {
+    width: 50%;
+    height: 100%;
+  }
+
+  .mma__info-quote-title {
+    text-align: center;
+    padding-top: 10%;
+    font-family: serif;
+    font-size: 140%;
+  }
+
+  .price__group {
+    gap: 2%;
+  }
+
+  .price__big-table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  .price__form {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 9% 1% 9% 1%;
+  }
+
+  .price__form-body {
+    border: none;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width: 100%;
+    font-size: 85%;
+  }
+
+  .price__big-table {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+
+  .price__big-table-tr {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .new__form-videos {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__nav-logo {
+    width: 10%;
+  }
+
+  .header__nav-list-subtitle {
+    font-size: 100%;
+  }
+
+  .home__form-title {
+    font-size: 215%;
+  }
+
+  .home__form-text {
+    font-size: 96%;
+    font-weight: 1000;
+    line-height: 100%;
+    -webkit-text-stroke: 1px black;
+    text-align: center;
+    margin-top: 1%;
+  }
+
+  .we__title {
+    font-size: 135%;
+  }
+
+  .we__text {
+    font-size: 85%;
+  }
+
+  .we__whys-whyone-title {
+    font-size: 80%;
+  }
+
+  .we__whys-whyone-text {
+    font-size: 72%;
+  }
+
+  .we__whys-whytwo-text {
+    font-size: 72%;
+    width: 80%;
+  }
+
+  .we__whys-whythree-text {
+    font-size: 72%;
+  }
+
+  .programs__title {
+    font-size: 135%;
+  }
+
+  .programs__text {
+    font-size: 90%;
+  }
+
+  .programs__kids-form-photo {
+    border-radius: 50%;
+    width: 90%;
+  }
+
+  .programs__kids-form-title {
+    font-size: 88%;
+  }
+
+  .programs__kids-form-text {
+    font-size: 79%;
+  }
+
+  .programs__kids-big-photo {
+    border-radius: 50%;
+    width: 90%;
+  }
+
+  .programs__kids-big-text {
+    font-size: 79%;
+  }
+
+  .programs__class-vip-photo {
+    border-radius: 50%;
+    width: 90%;
+  }
+
+  .programs__class-vip-title {
+    font-size: 88%;
+  }
+
+  .programs__class-vip-text {
+    font-size: 79%;
+  }
+
+  .programs__class-they-photo {
+    border-radius: 50%;
+    width: 90%;
+  }
+
+  .programs__class-they-text {
+    font-size: 79%;
+  }
+
+  .benefit__title {
+    font-size: 135%;
+  }
+
+  .benefit__text {
+    font-size: 89%;
+  }
+
+  .benefit__form-text {
+    font-size: 72%;
+    font-weight: 500;
+  }
+
+  .follow__title {
+    font-size: 150%;
+  }
+
+  .follow__net-social {
+    font-size: 180%;
+  }
+
+  .companye__title {
+    font-size: 135%;
+  }
+
+  .companye__text {
+    font-size: 89%;
+  }
+
+  .companye__word {
+    font-size: 90%;
+  }
+
+  .footer__title {
+    font-size: 135%;
+  }
+
+  .footer__text {
+    font-size: 89%;
+  }
+
+  .footer__contact-adres-title {
+    font-size: 95%;
+  }
+
+  .footer__contact-adres-text {
+    width: 100%;
+    text-align: center;
+    font-size: 70%;
+  }
+
+  .footer__contact-tel-text {
+    font-size: 70%;
+  }
+
+  .footer__contact-email-text {
+    font-size: 70%;
+    text-align: center;
+    width: 100%;
+  }
+
+  .sports__species {
+    display: flex;
+    height: 210px;
+    flex-direction: column;
+  }
+
+  .mma__info-mma-title {
+    font-size: 97%;
+  }
+
+  .mma__info-form-word {
+    font-size: 106%;
+    font-family: serif;
+  }
+
+  .price__group {
+    display: flex;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    padding: 5% 1% 1% 1%;
+    flex-wrap: wrap;
+  }
+
+  .price__big {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8%;
+  }
+
+  .price__big-photo {
+    width: 50%;
+    border-radius: 11%;
+  }
+
+  .price__big-form-title {
+    display: flex;
+    justify-content: center;
+    font-family: serif;
+    font-size: 200%;
+    text-align: center;
+  }
+
+  .price__big-table-tr {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .price__big-form-btn {
+    padding: 6% 16%;
+  }
+
+  .price__big-table {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+  }
+
+  .price__big-form {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+  }
+
+  .price__big-table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 110%;
+  }
+
+  .price__form-body {
+    border: none;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width: 100%;
+    font-size: 100%;
+  }
+
+  .new__form-videos {
+    width: 49%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__nav-logo {
+    width: 13%;
+  }
+
+  .header__nav-menu {
+    position: fixed;
+    top: 0;
+    left: -50%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    border: 2px solid #000000;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s linear;
+  }
+
+  .header__nav-menu.active {
+    transform: translateX(100%);
+    z-index: 3;
+  }
+
+  .header__nav-list {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+    padding-left: 20%;
+  }
+
+  .header__nav-list-subtitle {
+    margin: 10px 0;
+    color: #000000;
+    font-weight: 500;
+  }
+
+  .header__nav-list-subtitle:nth-child(n + 2) {
+    margin-left: 0;
+  }
+
+  .header__nav-button {
+    display: block;
+    margin-left: auto;
+    width: 5%;
+    font-size: 150%;
+    color: black;
+    height: 0%;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .home__form-title {
+    font-size: 145%;
+  }
+
+  .home__form-text {
+    font-size: 83%;
+  }
+
+  .we__title {
+    font-size: 125%;
+    padding-top: 10%;
+  }
+
+  .we__text {
+    font-size: 75%;
+  }
+
+  .we__whys {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .we__whys-whyone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+  }
+
+  .we__whys-whyone-title {
+    font-size: 84%;
+  }
+
+  .we__whys-whytwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+  }
+
+  .we__whys-whyone-trener {
+    width: 30%;
+  }
+
+  .we__whys-whyone-text {
+    font-size: 72%;
+    width: 81%;
+  }
+
+  .we__whys-whythree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10%;
+  }
+
+  .we__whys-whythree-eye {
+    width: 30%;
+  }
+
+  .we__whys-whythree-text {
+    font-size: 72%;
+    width: 80%;
+  }
+
+  .programs__title {
+    font-size: 125%;
+  }
+
+  .programs__text {
+    font-size: 80%;
+  }
+
+  .programs__kids-form-title {
+    font-size: 65%;
+  }
+
+  .programs__kids-form-text {
+    font-size: 65%;
+  }
+
+  .programs__kids-big-text {
+    font-size: 65%;
+  }
+
+  .programs__kids-form-photo {
+    border-radius: 50%;
+    width: 95%;
+  }
+
+  .programs__kids-big-photo {
+    border-radius: 50%;
+    width: 95%;
+  }
+
+  .programs__class-vip-title {
+    font-size: 65%;
+  }
+
+  .programs__class-vip-text {
+    font-size: 65%;
+  }
+
+  .programs__class-they-text {
+    font-size: 65%;
+  }
+
+  .programs__class-they-photo {
+    border-radius: 50%;
+    width: 95%;
+  }
+
+  .programs__class-vip-photo {
+    border-radius: 50%;
+    width: 95%;
+  }
+
+  .benefit__title {
+    font-size: 125%;
+  }
+
+  .benefit__text {
+    font-size: 80%;
+  }
+
+  .benefit__form-text {
+    font-size: 63%;
+  }
+
+  .follow__title {
+    font-size: 125%;
+  }
+
+  .follow__net-social {
+    font-size: 150%;
+  }
+
+  .companye__title {
+    font-size: 125%;
+  }
+
+  .companye__text {
+    font-size: 79%;
+  }
+
+  .companye__word {
+    font-size: 74%;
+  }
+
+  .companye__title {
+    font-size: 110%;
+  }
+
+  .companye__text {
+    font-size: 85%;
+  }
+
+  .companye__word {
+    font-size: 72%;
+  }
+
+  .footer__title {
+    font-size: 125%;
+  }
+
+  .footer__text {
+    font-size: 79%;
+  }
+
+  .footer__contact-adres-title {
+    font-size: 85%;
+  }
+
+  .footer__contact-adres-text {
+    width: 100%;
+    font-size: 57%;
+  }
+
+  .footer__contact-tel-text {
+    font-size: 57%;
+    text-align: center;
+  }
+
+  .footer__contact-email-text {
+    font-size: 57%;
+    width: 100%;
+  }
+
+  .mma__info-form-title {
+    font-size: 125%;
+  }
+
+  .mma__info-form-word {
+    font-size: 90%;
+  }
+
+  .mma__info-mma-title {
+    font-size: 84%;
+  }
+
+  .mma__info-quote-title {
+    padding-top: 7%;
+    font-size: 125%;
+  }
+
+  .mma__info-quote-word {
+    width: 96%;
+    font-size: 90%;
+    font-family: serif;
+  }
+
+  .price__title {
+    padding-top: 15%;
+    font-size: 125%;
+  }
+
+  .price__text {
+    font-size: 95%;
+  }
+
+  .price__big-form-title {
+    font-size: 160%;
+  }
+
+  .price__big-form {
+    width: 65%;
+  }
+
+  .price__big-table td {
+    font-size: 100%;
+  }
+
+  .price__form-body {
+    width: 100%;
+    font-size: 90%;
+  }
+
+  .price__big-form-btn {
+    padding: 7% 13%;
+  }
+
+  .new__form-videos {
+    width: 74%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__nav {
+    justify-content: space-between;
+  }
+
+  .home__form-title {
+    font-size: 125%;
+  }
+
+  .home__form-text {
+    font-size: 72%;
+  }
+
+  .we__text {
+    font-size: 70%;
+  }
+
+  .we__whys-whyone-text {
+    font-size: 66%;
+    width: 81%;
+  }
+
+  .we__whys-whytwo-text {
+    font-size: 66%;
+    width: 80%;
+  }
+
+  .we__whys-whythree-text {
+    font-size: 66%;
+    width: 80%;
+  }
+
+  .programs__title {
+    font-size: 95%;
+  }
+
+  .programs__text {
+    font-size: 65%;
+  }
+
+  .programs__kids {
+    display: flex;
+    justify-content: center;
+    padding-top: 7%;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .programs__kids-form-title {
+    font-size: 90%;
+  }
+
+  .programs__kids-form-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__kids-big-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__class-vip-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__kids-big {
+    display: flex;
+    padding-top: 3%;
+  }
+
+  .programs__class-they {
+    display: flex;
+    padding-top: 3%;
+  }
+
+  .programs__class-they-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__kids-form-text {
+    font-size: 85%;
+  }
+
+  .programs__kids-big-text {
+    font-size: 85%;
+  }
+
+  .programs__class {
+    display: flex;
+    justify-content: center;
+    padding-top: 6%;
+    flex-wrap: wrap;
+  }
+
+  .programs__class-vip-title {
+    font-size: 90%;
+  }
+
+  .programs__class-vip-text {
+    font-size: 85%;
+  }
+
+  .programs__class-they-text {
+    font-size: 85%;
+  }
+
+  .benefit__title {
+    font-size: 95%;
+  }
+
+  .benefit__text {
+    font-size: 64%;
+  }
+
+  .benefit__form-text {
+    font-size: 54%;
+  }
+
+  .follow__net-social {
+    font-size: 140%;
+  }
+
+  .follow__title {
+    font-size: 120%;
+  }
+
+  .companye__title {
+    font-size: 95%;
+  }
+
+  .companye__text {
+    font-size: 70%;
+  }
+
+  .companye__word {
+    font-size: 69%;
+  }
+
+  .footer__title {
+    font-size: 95%;
+  }
+
+  .footer__text {
+    font-size: 70%;
+  }
+
+  .footer__contact-adres-title {
+    font-size: 68%;
+  }
+
+  .footer__contact-adres-text {
+    width: 100%;
+    font-size: 49%;
+  }
+
+  .footer__contact-tel-text {
+    font-size: 49%;
+    text-align: center;
+  }
+
+  .footer__contact-email-text {
+    font-size: 49%;
+    width: 100%;
+  }
+
+  .sports__species {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+  }
+
+  .mma__info-form-title {
+    font-size: 95%;
+  }
+
+  .mma__info-form-word {
+    font-size: 78%;
+  }
+
+  .mma__info-mma-title {
+    font-size: 75%;
+  }
+
+  .mma__info-quote-title {
+    font-size: 95%;
+  }
+
+  .mma__info-quote-word {
+    font-size: 75%;
+  }
+
+  .price__title {
+    font-size: 110%;
+  }
+
+  .price__text {
+    font-size: 85%;
+  }
+
+  .price__big-form-title {
+    font-size: 135%;
+  }
+
+  .price__big-form {
+    width: 60%;
+  }
+
+  .price__big-table td {
+    font-size: 85%;
+  }
+
+  .price__form-body {
+    font-size: 85%;
+  }
+
+  .price__big-form-btn {
+    padding: 5% 13%;
+  }
+
+  .new__form-videos {
+    width: 79%;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__nav-logo {
+    width: 18%;
+  }
+
+  .home__form-text {
+    font-size: 52%;
+    -webkit-text-stroke: 0.6px black;
+  }
+
+  .home__form-title {
+    font-size: 110%;
+  }
+
+  .home__form-btn {
+    font-size: 55%;
+    padding: 4% 2%;
+    margin-top: 55%;
+  }
+
+  .we__title {
+    font-size: 90%;
+    padding-top: 10%;
+  }
+
+  .we__text {
+    font-size: 56%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .we__whys-whyone-title {
+    font-size: 70%;
+  }
+
+  .we__whys-whyone-text {
+    font-size: 57%;
+    width: 81%;
+  }
+
+  .we__whys-whytwo-text {
+    font-size: 57%;
+    width: 80%;
+  }
+
+  .we__whys-whythree-text {
+    font-size: 57%;
+    width: 80%;
+  }
+
+  .programs__title {
+    font-size: 70%;
+  }
+
+  .programs__text {
+    font-size: 56%;
+  }
+
+  .programs__kids {
+    display: flex;
+    justify-content: center;
+    padding-top: 7%;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .programs__kids-form-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__kids-big-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__kids-form-title {
+    font-size: 52%;
+  }
+
+  .programs__kids-big {
+    display: flex;
+    padding-top: 7%;
+  }
+
+  .programs__kids-form-text {
+    font-size: 52%;
+  }
+
+  .programs__kids-big-text {
+    font-size: 52%;
+  }
+
+  .programs__class {
+    display: flex;
+    justify-content: center;
+    padding-top: 6%;
+    flex-wrap: wrap;
+  }
+
+  .programs__class-vip-title {
+    font-size: 52%;
+  }
+
+  .programs__class-vip-text {
+    font-size: 52%;
+  }
+
+  .programs__class-they-text {
+    font-size: 52%;
+  }
+
+  .programs__class-vip-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__class-they-photo {
+    border-radius: 50%;
+    width: 75%;
+  }
+
+  .programs__class-they {
+    display: flex;
+    padding-top: 7%;
+  }
+
+  .benefit__title {
+    font-size: 77%;
+  }
+
+  .benefit__text {
+    font-size: 52%;
+  }
+
+  .benefit__form-text {
+    font-size: 45%;
+  }
+
+  .benefit__form-photo {
+    width: 45%;
+  }
+
+  .follow__title {
+    font-size: 90%;
+  }
+
+  .companye__word {
+    font-size: 59%;
+  }
+
+  .companye__text {
+    font-size: 55%;
+  }
+
+  .footer__text {
+    font-size: 50%;
+  }
+
+  .footer__title {
+    font-size: 60%;
+  }
+
+  .footer__contact-adres-title {
+    font-size: 51%;
+  }
+
+  .footer__contact-adres-text {
+    width: 120%;
+    font-size: 35%;
+  }
+
+  .footer__contact-tel-text {
+    font-size: 35%;
+    width: 120%;
+    text-align: center;
+  }
+
+  .footer__contact-email-text {
+    font-size: 35%;
+    width: 120%;
+  }
+
+  .sports__species {
+    display: flex;
+    height: 270px;
+    flex-direction: column;
+  }
+
+  .mma__info-form-title {
+    font-size: 70%;
+  }
+
+  .mma__info-form-word {
+    font-size: 63%;
+  }
+
+  .mma__info-mma-title {
+    font-size: 60%;
+  }
+
+  .mma__info-quote-title {
+    font-size: 75%;
+  }
+
+  .mma__info-quote-word {
+    font-size: 52%;
+  }
+
+  .price__title {
+    font-size: 80%;
+  }
+
+  .price__text {
+    font-size: 60%;
+  }
+
+  .price__big-form-title {
+    font-size: 95%;
+  }
+
+  .price__big-table td {
+    font-size: 65%;
+  }
+
+  .price__form-body {
+    font-size: 85%;
+    padding: 0 5px 0 5px;
+  }
+
+  .price__big-form-btn {
+    padding: 4% 9%;
+    font-size: 64%;
+  }
+
+  .new__form-videos {
+    width: 98%;
+  }
+}

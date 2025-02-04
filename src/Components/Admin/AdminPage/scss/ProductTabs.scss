@@ -1,0 +1,38 @@
+.product-tabs {
+  background: #1e1e1e; // Тёмный фон формы
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    
+    button {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &.active {
+        color: #0099ff; // Цвет для активной вкладки
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: #0099ff;
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    background: #2c2c2c;
+    border-radius: 8px;
+  }
+}

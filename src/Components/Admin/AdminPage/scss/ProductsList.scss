@@ -1,0 +1,63 @@
+.product-list {
+  background: #1e1e1e; // Тёмный фон списка
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    color:  #0099ff; // Желтый цвет для заголовка
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+
+    th {
+      background: #333;
+      font-weight: bold;
+    }
+
+    td {
+      background: #2c2c2c;
+    }
+
+    &__table-header {
+      background: #333;
+    }
+
+    &__table-row {
+      &:hover {
+        background: #3a3a3a;
+      }
+    }
+  }
+
+  &__delete-button {
+    background: #ff0000;
+    color: #1e1e1e;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #e60000; // Немного темнее при наведении
+    }
+
+    &:disabled {
+      background: #666;
+      cursor: not-allowed;
+    }
+  }
+}

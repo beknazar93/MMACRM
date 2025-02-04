@@ -1,0 +1,45 @@
+.product-form {
+    background: #1e1e1e; // Темный фон формы
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+    &__input,
+    &__button {
+      background: #2c2c2c;
+      border: 1px solid #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+  
+      &::placeholder {
+        color: #aaa; // Цвет подсказок
+      }
+  
+      &:focus {
+        background: #333;
+        border-color: #0099ff; // Желтая подсветка при фокусе
+      }
+  
+      &:hover {
+        background: #333;
+        border-color:  #0099ff; // Подсветка при наведении
+      }
+    }
+  
+    &__button {
+      background:  #0099ff;
+      color: #1e1e1e;
+      cursor: pointer;
+  
+      &:hover {
+        background:  #0099ff; // Немного темнее при наведении
+      }
+    }
+  }
+  

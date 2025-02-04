@@ -1,0 +1,100 @@
+.footer {
+    width: 100%;
+    height: 100%;
+    padding: 2% 1% 3% 1%;
+    background-color: rgb(17, 17, 17);
+    &__title {
+        display: flex;
+        justify-content: center;
+        font-family: sans-serif;
+        font-weight: 700;
+        line-height: 140%;
+        color: white;
+        font-size: 155%;
+    }
+    &__text {
+        display: flex;
+        justify-content: center;
+        font-family: serif;
+        font-weight: 500;
+        font-size: 115%;
+        line-height: 150%;
+        color: #c4c4c4;
+    }
+    &__contact {
+        display: flex;
+        padding-top: 2%;
+        justify-content: space-around;
+        &-adres {
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-title {
+                display: flex;
+                justify-content: center;
+                color: #c4c4c4;
+            }
+            &-text {
+                display: flex;
+                justify-content: center;
+                padding-top: 1%;
+                width: 107%;
+                color: #c4c4c4;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            &-photo {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &-tel {
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-title {
+                display: flex;
+                justify-content: center;
+                color: #c4c4c4;
+            }
+            &-text {
+                padding-top: 1%;
+                color: #c4c4c4;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                text-decoration: none;
+            }
+            &-photo {
+                width: 26%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &-email {
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-title {
+                display: flex;
+                justify-content: center;
+                color: #c4c4c4;
+            }
+            &-text {
+                padding-top: 1%;
+                color: #c4c4c4;
+                display: flex;
+                justify-content: center;
+            }
+            &-photo {
+                width: 48%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

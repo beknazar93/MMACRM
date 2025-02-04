@@ -1,0 +1,78 @@
+.client-form {
+  max-width: 500px; // Уменьшаем максимальную ширину для компактности
+  margin: 0 auto;
+  padding: 20px; // Увеличиваем отступы для улучшения восприятия
+  background: #1e1e1e; // Тёмный фон формы
+  border-radius: 10px; // Уменьшаем радиус скругления
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); // Слегка уменьшаем тень
+  color: #ddd; // Светлый текст для контраста
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); // Увеличиваем минимальную ширину
+    gap: 16px; // Увеличиваем промежутки
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; // Увеличиваем пространство между подписью и элементом
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    padding: 12px; // Увеличиваем отступы внутри элементов
+    font-size: 16px; // Увеличиваем размер шрифта для удобства
+    border: 1px solid #444; // Тёмная рамка
+    border-radius: 8px; // Увеличиваем радиус скругления
+    background: #2a2a2a; // Тёмный фон элементов
+    color: #eee; // Светлый текст
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: #4a90e2; // Акцентный синий цвет
+      outline: none;
+      box-shadow: 0 0 6px rgba(74, 144, 226, 0.8); // Эффект фокуса
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 46px; // Увеличиваем высоту текстового поля для комментариев
+    font-family: 'Roboto', sans-serif; // Подходящий шрифт
+  }
+
+  &__button {
+    width: 100%;
+    padding: 14px; // Увеличиваем отступы
+    font-size: 16px; // Увеличиваем шрифт для кнопки
+    font-weight: bold;
+    color: #fff; // Белый текст
+    background: #4a90e2; // Синий акцент
+    border: none;
+    border-radius: 8px; // Увеличиваем радиус скругления
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 5%;
+
+    &:hover {
+      background: #357abd; // Более тёмный синий при наведении
+    }
+  }
+
+  // Адаптивность для меньших экранов
+  @media (max-width: 600px) {
+    padding: 15px; // Уменьшаем отступы на маленьких экранах
+    max-width: 100%; // Заполняет всю доступную ширину
+    &__grid {
+      grid-template-columns: 1fr; // Столбец для маленьких экранов
+      gap: 16px; // Увеличиваем промежутки
+    }
+
+    &__button {
+      font-size: 16px; // Увеличиваем размер шрифта для кнопки
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.client-update__modal-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  padding: 5px; /* Меньше отступы */
+}
+
+.client-update__modal {
+  background: #2c2c2c; 
+  color: #fff; 
+  width: 85%; /* Меньше ширина */
+  max-width: 350px; /* Еще меньше ширина */
+  padding: 10px; /* Уменьшенные отступы */
+  border-radius: 6px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Еще меньше расстояние */
+}
+
+.client-update__modal-title {
+  font-size: 16px; /* Меньше заголовок */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.client-update__input,
+.client-update__select,
+.client-update__textarea {
+  width: 100%;
+  padding: 6px; /* Меньше padding */
+  margin-bottom: 6px; /* Меньше отступы */
+  background: #3a3a3a;
+  color: #fff; 
+  border: 1px solid #555; 
+  border-radius: 4px; /* Меньше border-radius */
+  font-size: 12px; /* Еще меньший шрифт */
+}
+
+.client-update__textarea {
+  resize: none;
+  height: 60px; /* Меньше размер текстовой области */
+}
+
+.client-update__actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-update__button {
+  padding: 6px;
+  font-size: 12px; /* Меньше шрифт */
+  width: 48%;
+  border-radius: 4px; /* Меньше border-radius */
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &--save {
+    background: #007bff;
+    color: white;
+
+    &:hover {
+      background: #0056b3; 
+    }
+  }
+
+  &--cancel {
+    background: #555;
+    color: white;
+
+    &:hover {
+      background: #333; 
+    }
+  }
+}
+

@@ -1,0 +1,63 @@
+.product-sell {
+    background: #1e1e1e; // Тёмный фон для формы продажи
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+  
+    &__title {
+      font-size: 24px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #0099ff; // Желтый цвет для заголовка
+    }
+  
+    &__select,
+    &__input,
+    &__button {
+      background: #2c2c2c;
+      border: 1px solid #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      width: 100%;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+  
+      &::placeholder {
+        color: #aaa; // Цвет подсказок
+      }
+  
+      &:focus {
+        background: #333;
+        border-color: #0099ff; // Желтая подсветка при фокусе
+      }
+  
+      &:hover {
+        background: #333;
+        border-color: #0099ff; // Подсветка при наведении
+      }
+  
+      &:disabled {
+        background: #666;
+        cursor: not-allowed;
+      }
+    }
+  
+    &__button {
+      background: #0099ff;
+      color: #1e1e1e;
+      cursor: pointer;
+  
+      &:hover {
+        background: rgb(0, 230, 104); // Немного темнее при наведении
+      }
+    }
+  
+    &__message {
+      color: #00ff6a;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  

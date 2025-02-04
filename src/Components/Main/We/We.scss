@@ -1,0 +1,99 @@
+.we {
+    width: 100%;
+    height: 100%;
+    padding: 4% 1% 8% 1%;
+
+    &__title {
+        color: var(--text, #292929);
+        font-family: sans-serif;
+        font-weight: 800;
+        display: flex;
+        justify-content: center;
+        font-size: 150%;
+    }
+
+    &__text {
+        color: var(--text, #000000);
+        font-family: serif;
+        font-size: 115%;
+        display: flex;
+        justify-content: center;
+        line-height: 140%;
+    }
+
+    &__whys {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5%;
+
+        &-whyone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-trener {
+                width: 50%;            }
+
+            &-title {
+                color: var(--text, #000000);
+                font-family: system-ui;
+                font-weight: 800;
+                line-height: 100%;
+                font-size: 103%;
+                text-align: center;
+            }
+
+            &-text {
+                padding-top: 2%;
+                color: var(--text, #000000);
+                font-family: system-ui;
+                font-style: normal;
+                font-size: 85%;
+                line-height: 140%;
+                text-align: center;
+            }
+        }
+
+        &-whytwo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-price {
+                width: 32%;
+            }
+
+            &-text {
+                padding-top: 2%;
+                color: var(--text, #000000);
+                font-family: system-ui;
+                font-style: normal;
+                font-size: 85%;
+                line-height: 140%;
+                text-align: center;
+            }
+        }
+
+        &-whythree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-eye {
+                width: 55%;
+
+            }
+
+            &-text {
+                padding-top: 2%;
+                color: var(--text, #000000);
+                font-family: system-ui;
+                font-style: normal;
+                font-size: 85%;
+                line-height: 140%;
+                text-align: center;
+            }
+        }
+    }
+}
