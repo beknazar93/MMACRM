@@ -159,6 +159,15 @@ function ClientUpdate() {
               placeholder="Email"
               className="client-update__input"
             />
+            <input
+              type="text"
+              name="stage"
+              value={formData.stage || ""}
+              onChange={handleChange}
+              placeholder="Stage"
+              className="client-update__input"
+            />
+
 
             {/* Селекторы для тренера, спортивной категории, года, месяца, дня и статуса оплаты */}
             <select

@@ -18,6 +18,7 @@ const FilterComponent = ({ filters, setFilters, trainers, sports, months, years,
         className="filters__input filters__input--text"
         type="text"
         name="name"
+        autocomplete="off"
         placeholder="Поиск по имени"
         value={filters.name} // Значение поля "name" из фильтров
         onChange={handleFilterChange} // Обработчик изменения поля

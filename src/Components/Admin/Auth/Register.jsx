@@ -96,11 +96,11 @@ const Register = () => {
     onChange={handleInputChange}
     className="registration-form__select"
   >
+    <option value="">Выберите Роль</option>
     <option value="admin">Администратор</option>
     <option value="client_manager">Менеджер по работе с клиентами</option>
     <option value="product_manager">Менеджер продукта</option>
-    {/* <option value="hr_manager">HR-менеджер</option>
-    <option value="employee">Сотрудник</option> */}
+    {/* <option value="hr_manager">HR-менеджер</option> */}
   </select>
   <button type="submit" className="registration-form__button">Регистрация</button>
   <Link to="/admin" className="registration-form__link">Уже есть аккаунт</Link>

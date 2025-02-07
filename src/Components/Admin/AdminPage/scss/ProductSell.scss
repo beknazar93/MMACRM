@@ -1,63 +1,128 @@
 .product-sell {
-    background: #1e1e1e; // Тёмный фон для формы продажи
-    padding: 20px;
-    border-radius: 8px;
+  background: #1e1e1e; // Тёмный фон для формы продажи
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #0099ff; // Цвет для заголовка
+  }
+
+  &__select,
+  &__input,
+  &__button {
+    background: #2c2c2c;
+    border: 1px solid #333;
     color: #fff;
-  
-    &__title {
-      font-size: 24px;
-      margin-bottom: 15px;
-      text-align: center;
-      color: #0099ff; // Желтый цвет для заголовка
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &::placeholder {
+      color: #aaa; // Цвет подсказок
     }
-  
+
+    &:focus {
+      background: #333;
+      border-color: #0099ff; // Подсветка при фокусе
+    }
+
+    &:hover {
+      background: #333;
+      border-color: #0099ff; // Подсветка при наведении
+    }
+
+    &:disabled {
+      background: #666;
+      cursor: not-allowed;
+    }
+  }
+
+  &__button {
+    background: #0099ff;
+    color: #1e1e1e;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(0, 230, 104); // Немного темнее при наведении
+    }
+  }
+
+  &__message {
+    color: #00ff6a;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  // Адаптация для экранов меньше 768px
+  @media (max-width: 768px) {
+    padding: 15px;
+    gap: 12px;
+
+    &__title {
+      font-size: 20px;
+    }
+
     &__select,
     &__input,
     &__button {
-      background: #2c2c2c;
-      border: 1px solid #333;
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 16px;
-      margin-bottom: 10px;
-      width: 100%;
-      transition: background-color 0.3s ease, border-color 0.3s ease;
-  
-      &::placeholder {
-        color: #aaa; // Цвет подсказок
-      }
-  
-      &:focus {
-        background: #333;
-        border-color: #0099ff; // Желтая подсветка при фокусе
-      }
-  
-      &:hover {
-        background: #333;
-        border-color: #0099ff; // Подсветка при наведении
-      }
-  
-      &:disabled {
-        background: #666;
-        cursor: not-allowed;
-      }
+      font-size: 14px;
+      padding: 8px;
     }
-  
+
     &__button {
-      background: #0099ff;
-      color: #1e1e1e;
-      cursor: pointer;
-  
-      &:hover {
-        background: rgb(0, 230, 104); // Немного темнее при наведении
-      }
-    }
-  
-    &__message {
-      color: #00ff6a;
-      text-align: center;
-      margin-top: 10px;
+      font-size: 14px;
+      padding: 10px;
     }
   }
-  
+
+  // Адаптация для экранов меньше 576px
+  @media (max-width: 576px) {
+    padding: 12px;
+    gap: 10px;
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__select,
+    &__input,
+    &__button {
+      font-size: 12px;
+      padding: 6px;
+    }
+
+    &__button {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+
+  // Адаптация для экранов меньше 480px
+  @media (max-width: 480px) {
+    padding: 10px;
+    gap: 8px;
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__select,
+    &__input,
+    &__button {
+      font-size: 10px;
+      padding: 5px;
+    }
+
+    &__button {
+      font-size: 10px;
+      padding: 6px;
+    }
+  }
+}

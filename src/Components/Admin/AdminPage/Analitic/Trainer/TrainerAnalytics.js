@@ -4,14 +4,9 @@ import MonthOne from './MonthOne'
 
 function Trainer() {
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'space-around'
-
-    }}>
-      <MonthOne/>
-      <MonthTwo/>
-
+    <div className="month-container">
+      <MonthOne />
+      <MonthTwo />
     </div>
   )
 }

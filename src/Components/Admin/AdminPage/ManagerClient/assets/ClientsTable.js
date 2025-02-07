@@ -104,6 +104,7 @@ function ClientsTable() {
             <p className="client-modal__item"><strong>Имя:</strong> {selectedClient.name}</p>
             <p className="client-modal__item"><strong>Email:</strong> {selectedClient.email}</p>
             <p className="client-modal__item"><strong>Телефон:</strong> {selectedClient.phone}</p>
+            <p className="client-modal__item"><strong>Этап:</strong> {selectedClient.stage}</p>
             <p className="client-modal__item"><strong>Тренер:</strong> {selectedClient.trainer || "Не указан"}</p>
             <p className="client-modal__item"><strong>Категория спорта:</strong> {selectedClient.sport_category || "Не указано"}</p>
             <p className="client-modal__item"><strong>Месяц:</strong> {selectedClient.month || "Не указан"}</p>

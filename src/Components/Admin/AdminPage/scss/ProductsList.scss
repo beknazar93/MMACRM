@@ -8,7 +8,7 @@
     font-size: 24px;
     margin-bottom: 15px;
     text-align: center;
-    color:  #0099ff; // Желтый цвет для заголовка
+    color: #0099ff; // Желтый цвет для заголовка
   }
 
   &__table {
@@ -58,6 +58,79 @@
     &:disabled {
       background: #666;
       cursor: not-allowed;
+    }
+  }
+
+  // Адаптация для мобильных устройств и разных экранов
+  @media (max-width: 768px) {
+    padding: 15px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__table {
+      font-size: 14px;
+
+      th, td {
+        padding: 10px;
+      }
+    }
+
+    &__delete-button {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+
+    // Прокрутка для таблицы
+    &__table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 10px;
+
+    &__title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    &__table {
+      font-size: 12px;
+
+      th, td {
+        padding: 8px;
+      }
+    }
+
+    &__delete-button {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    // Сделать таблицу более удобной на маленьких экранах
+    &__table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__table {
+      font-size: 10px;
+
+      th, td {
+        padding: 6px;
+      }
+    }
+
+    &__delete-button {
+      padding: 4px 8px;
+      font-size: 10px;
     }
   }
 }

@@ -6,6 +6,8 @@
     max-width: 700px;
     margin: 20px auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
   
     h1 {
       font-size: 26px;

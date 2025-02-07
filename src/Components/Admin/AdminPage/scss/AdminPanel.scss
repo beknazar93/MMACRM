@@ -1,58 +1,120 @@
 .admin-panel {
   display: flex;
-  background-color: #1a1a1a; /* Общий тёмный фон */
+  background-color: #1a1a1a;
+  min-height: 100vh; // Гарантированная высота панели
 }
 
 .custom-sidebar {
   width: 220px;
-  background-color: #0b0b0b; /* Очень тёмный фон */
-  color: #dcdcdc; /* Светлый текст */
+  background-color: #0b0b0b;
+  color: #dcdcdc;
   padding: 20px;
-  height: 100vh; /* Сайдбар на всю высоту окна */
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.8); /* Эффект тени */
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: width 0.3s ease;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #b3b3b3;
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      transform: translateX(5px); // Лёгкое смещение при наведении
+    }
+
+    &--active {
+      background-color: #151515;
+      color: #ffffff;
+      font-weight: bold;
+      box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+  }
 }
-
-.custom-sidebar__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.custom-sidebar__item {
-  width: 100%;
-  padding: 15px 20px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  color: #b3b3b3; /* Нейтральный текст */
-  background-color: transparent; /* Прозрачный фон */
-  border-radius: 8px; /* Мягкие края */
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.custom-sidebar__item:hover {
-  background-color: #1a1a1a; /* Тёмно-серый фон при наведении */
-  color: #ffffff; /* Белый текст при наведении */
-}
-
-.custom-sidebar__item--active {
-  background-color: #151515; /* Активный элемент — тёмно-серый фон */
-  color: #ffffff; /* Белый текст */
-  font-weight: bold; /* Жирный шрифт для выделения */
-  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1); /* Внутренняя тень */
-}
-
-
 
 .admin-panel__content {
   flex: 1;
-  background-color: #181818; /* Ещё более тёмный фон для контента */
-  color: #d9d9d9; /* Светлый текст для лучшей читабельности */
+  background-color: #181818;
+  color: #d9d9d9;
   padding: 20px;
-  border-left: 1px solid #2a2a2a; /* Тонкая граница между боковой панелью и контентом */
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); /* Эффект внутренней тени */
+  border-left: 1px solid #2a2a2a;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: padding 0.3s ease;
+}
+
+// Адаптивность для планшетов и мобильных устройств
+@media (max-width: 1024px) {
+  .custom-sidebar {
+    width: 180px;
+
+    &__item {
+      font-size: 14px;
+      padding: 12px 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-panel {
+    flex-direction: column;
+  }
+
+  .custom-sidebar {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+
+    &__list {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      z-index: 2;
+    }
+
+    &__item {
+      flex: 1;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .admin-panel__content {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-sidebar {
+    &__item {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+
+  .admin-panel__content {
+    padding: 10px;
+  }
 }

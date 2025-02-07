@@ -3,13 +3,16 @@
   border-radius: 8px;
   padding: 20px;
   color: #fff;
-  
+
   &__nav {
+    position: relative; /* Добавляем позиционирование */
     display: flex;
     justify-content: space-around;
     border-bottom: 2px solid #333;
     margin-bottom: 20px;
-    
+    overflow-x: auto; // Добавляем прокрутку для навигации
+    white-space: nowrap; // Запрещаем перенос элементов на новую строку
+
     button {
       background: transparent;
       border: none;
@@ -31,8 +34,73 @@
   }
 
   &__content {
+    position: relative;
     padding: 20px;
     background: #2c2c2c;
     border-radius: 8px;
+    z-index: 2;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 15px;
+
+    &__nav {
+      flex-direction: row;
+      margin-bottom: 15px;
+    }
+
+    &__content {
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    &__nav {
+      z-index: 2;
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+
+    &__content {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 8px;
+
+    &__nav {
+      margin-bottom: 8px;
+    }
+
+    &__content {
+      padding: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px;
+
+    &__nav {
+      margin-bottom: 6px;
+    }
+
+    &__content {
+      padding: 6px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    padding: 5px;
+
+    &__nav {
+      margin-bottom: 5px;
+    }
+
+    &__content {
+      padding: 5px;
+    }
   }
 }

@@ -29,6 +29,7 @@ const AddProduct = () => {
   <input
     type="text"
     name="name"
+    autocomplete="off"
     placeholder="Название"
     value={productData.name}
     onChange={handleChange}
@@ -38,6 +39,7 @@ const AddProduct = () => {
   <input
     type="number"
     name="product_price"
+    autocomplete="off"
     placeholder="Цена товара"
     value={productData.product_price}
     onChange={handleChange}

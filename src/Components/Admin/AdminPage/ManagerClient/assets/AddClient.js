@@ -23,20 +23,32 @@ function AddClient() {
     "Машрапов Тилек", "Мойдунов Мирлан", "Асанбаев Эрлан", "Анарбаев Акжол",
     "Минбаев Сулайман", "Калмамат Уулу Акай", "Маматжанов Марлен", "Лукас Крабб",
     "Тажибаев Азамат", "Азизбек Уулу Баяман", "Тургунов Ислам", "Медербек Уулу Сафармурат",
-    "Пазылов Кутман", "Жумалы Уулу Ариет",
+    "Пазылов Кутман", "Жумалы Уулу Ариет",
   ];
   const sports = ["ММА", "Кулату", "Бокс", "Борьба", "Тхэквондо", "Самбо", "Греко-римская борьба", "Кроссфит", "Дзюдо", "Кикбокс"];
   const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
   const years = Array.from({ length: 1 }, (_, i) => 2025 - i); // Два последних года для выбора
   const days = Array.from({ length: 31 }, (_, i) => i + 1); // Массив с числами от 1 до 31 для дней месяца
 
+  // Функция для получения имени менеджера из localStorage
+  const getManagerName = () =>
+    localStorage.getItem("manager_name") || "Unknown Manager";
+
   // Обработчик отправки формы
   const handleSubmit = async (e) => {
     e.preventDefault(); // Отменяем стандартное поведение формы, чтобы не обновлялась страница при отправке.
 
+    const managerName = getManagerName(); // Получаем имя менеджера
+    const clientData = {
+      ...formData,
+      comment: `"${managerName}": \n${formData.comment}`, // Обновляем комментарий с именем менеджера
+      date: `${formData.day || "1"}.${formData.month || "Январь"}.${formData.year || new Date().getFullYear()
+        }`,
+    };
+
     try {
       // Вызов API для добавления клиента с переданными данными
-      await addClient(formData); 
+      await addClient(clientData);
       alert("Клиент добавлен успешно!"); // Сообщение об успешном добавлении клиента
       setFormData({ // Очистка данных формы после успешного добавления
         name: "",
@@ -59,56 +71,71 @@ function AddClient() {
   };
 
   return (
-    // Основной элемент формы с классом "client-form"
     <form className="client-form" onSubmit={handleSubmit}>
-      <div className="client-form__grid"> {/* Контейнер для размещения всех элементов формы в сетке */}
-        {/* Поля ввода для каждого атрибута клиента */}
-        
-        {/* Поле для имени клиента */}
+      <div className="client-form__grid">
         <div className="client-form__group">
           <input
             className="client-form__input"
             type="text" name="name"
             placeholder="Имя"
-            value={formData.name} // Привязка значения к состоянию formData
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })} // Обновление значения имени при изменении
+            autocomplete="off"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
         </div>
 
-        {/* Поле для телефона */}
         <div className="client-form__group">
           <input
             className="client-form__input"
             type="tel"
             placeholder="Телефон"
-            value={formData.phone} // Привязка значения к состоянию formData
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })} // Обновление значения телефона при изменении
+            autocomplete="off"
+            value={formData.phone}
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           />
         </div>
 
-        {/* Поле для email */}
         <div className="client-form__group">
-          <input
+          {/* <input
             className="client-form__input"
             type="email"
+            autocomplete="off"
             placeholder="Email"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          />
+          /> */}
+          <select
+            className="client-form__select"
+            value={formData.email} // Значение будет сохраняться в formData.email
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })} // Обновляем email в состоянии
+          >
+            <option value="">Выберите email</option>
+            <option value="Primer@gmail.com">Primer@gmail.com</option>
+          </select>
+
         </div>
 
-        {/* Поле для этапа */}
         <div className="client-form__group">
-          <input
+          {/* <input
             className="client-form__input"
             type="text"
             placeholder="Этап"
+            autocomplete="off"
             value={formData.stage}
             onChange={(e) => setFormData({ ...formData, stage: e.target.value })}
-          />
+          /> */}
+          <select
+            className="client-form__select"
+            value={formData.stage} // Значение будет сохраняться в formData.stage
+            onChange={(e) => setFormData({ ...formData, stage: e.target.value })} // Обновляем stage в состоянии
+          >
+            <option value="">Выберите этап</option>
+            <option value="Ученик">Ученик</option>
+            <option value="Ученица">Ученица</option>
+          </select>
+
         </div>
 
-        {/* Селект для выбора тренера */}
         <div className="client-form__group">
           <select
             className="client-form__select"
@@ -116,13 +143,12 @@ function AddClient() {
             onChange={(e) => setFormData({ ...formData, trainer: e.target.value })}
           >
             <option value="">Выберите тренера</option>
-            {trainers.map((trainer, index) => ( // Маппинг тренеров из массива
+            {trainers.map((trainer, index) => (
               <option key={index} value={trainer}>{trainer}</option>
             ))}
           </select>
         </div>
 
-        {/* Селект для выбора вида спорта */}
         <div className="client-form__group">
           <select
             className="client-form__select"
@@ -136,7 +162,6 @@ function AddClient() {
           </select>
         </div>
 
-        {/* Поля для даты (месяц, год, день) */}
         <div className="client-form__group">
           <select
             className="client-form__select"
@@ -176,7 +201,6 @@ function AddClient() {
           </select>
         </div>
 
-        {/* Поле для цены */}
         <div className="client-form__group">
           <input
             className="client-form__input"
@@ -187,7 +211,6 @@ function AddClient() {
           />
         </div>
 
-        {/* Селект для статуса оплаты */}
         <div className="client-form__group">
           <select
             className="client-form__select"
@@ -200,7 +223,6 @@ function AddClient() {
           </select>
         </div>
 
-        {/* Поле для комментариев */}
         <div className="client-form__group">
           <textarea
             className="client-form__textarea"
@@ -211,7 +233,6 @@ function AddClient() {
         </div>
       </div>
 
-      {/* Кнопка отправки формы */}
       <button className="client-form__button" type="submit">Добавить клиента</button>
     </form>
   );

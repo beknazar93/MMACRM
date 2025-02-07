@@ -3,38 +3,55 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 15px;
-  background-color: #2c2c2c; // Темный фон
+  background-color: #2c2c2c;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); // Более выраженная тень для темного фона
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 
   &__input {
     font-size: 14px;
     padding: 8px 10px;
-    border: 1px solid #555; // Более темная граница
-    background-color: #3a3a3a; // Темный фон для элементов ввода
-    color: #fff; // Белый текст
+    border: 1px solid #555;
+    background-color: #3a3a3a;
+    color: #fff;
     border-radius: 4px;
     outline: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
     &:focus {
-      border-color: #4a90e2; // Насыщенный синий цвет границы при фокусе
-      box-shadow: 0 0 3px rgba(74, 144, 226, 0.6); // Синяя подсветка при фокусе
+      border-color: #4a90e2;
+      box-shadow: 0 0 3px rgba(74, 144, 226, 0.6);
     }
 
     &--text {
       flex: 1 1 100%;
-      max-width: 250px;
+      max-width: 150px;
     }
 
     &--select {
-      flex: 1 1 calc(33.33% - 10px);
-      max-width: 120px;
+      flex: 1 1 calc(25% - 10px); // 4 колонки на больших экранах
+      max-width: 150px;
     }
   }
 
-  /* Адаптация для мобильных устройств */
-  @media (max-width: 576px) {
+  /* Адаптация */
+  @media (max-width: 992px) {
+    &__input--select {
+      flex: 1 1 calc(33.33% - 10px); // 3 колонки
+      max-width: 130px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__input--select {
+      flex: 1 1 calc(50% - 10px); // 2 колонки
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: stretch;
+
     &__input {
       flex: 1 1 100%;
       max-width: 100%;

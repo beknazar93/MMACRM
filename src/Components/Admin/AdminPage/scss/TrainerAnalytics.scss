@@ -1,3 +1,15 @@
+.month-container {
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Элементы будут располагаться вертикально
+    align-items: center; // Центрируем по оси X
+  }
+}
+
+
+
 .trainer-income {
   padding: 15px; // Уменьшаем отступы
   font-family: Arial, sans-serif;
@@ -38,134 +50,5 @@ select {
   option {
     background-color: #333;
     color: #fff;
-  }
-}
-
-.trainer-income__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1px; // Увеличиваем промежутки, чтобы элементы не сливались
-}
-
-.trainer-income__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 8px; // Уменьшаем отступы
-  width: 105px; // Уменьшаем ширину карточек
-  background-color: #3a3a3a;
-  padding: 10px; // Уменьшаем внутренние отступы
-  border-radius: 8px; // Меньший радиус скругления
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    transform: translateY(-4px); // Немного уменьшаем эффект при наведении
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  }
-}
-
-.trainer-avatar {
-  position: relative;
-  width: 40px; // Уменьшаем размер аватара
-  height: 40px;
-  margin-bottom: 8px; // Уменьшаем отступ
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #444;
-}
-
-.trainer-avatar__circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #f4f4f4;
-  border: 2px solid #ccc;
-  font-size: 10px; // Уменьшаем шрифт для текста
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-.trainer-avatar__progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #4caf50;
-  border-radius: 50%;
-  z-index: 1;
-  transition: width 0.3s ease-in-out;
-}
-
-.trainer-info {
-  text-align: center;
-}
-
-.trainer-info__name {
-  font-size: 12px; // Уменьшаем шрифт имени
-  font-weight: bold;
-  margin-bottom: 4px; // Уменьшаем отступ
-  color: #fff;
-}
-
-.trainer-info__income {
-  font-size: 12px; // Уменьшаем размер текста для дохода
-  color: #4caf50;
-}
-
-.loading {
-  text-align: center;
-  font-size: 16px; // Уменьшаем размер шрифта
-  color: #aaa;
-}
-
-// Адаптивность для мобильных экранов
-@media (max-width: 600px) {
-  .trainer-income {
-    padding: 10px; // Уменьшаем отступы
-    max-width: 100%; // Форма занимает всю ширину
-  }
-
-  .trainer-income__title {
-    font-size: 16px; // Меньший размер заголовка
-  }
-
-  .trainer-income__filters {
-    gap: 6px; // Уменьшаем промежутки между фильтрами
-  }
-
-  .trainer-income__list {
-    gap: 6px; // Уменьшаем промежутки
-  }
-
-  .trainer-income__item {
-    width: 100px; // Еще более компактные карточки
-    padding: 8px; // Меньше отступов
-  }
-
-  .trainer-avatar {
-    width: 35px; // Меньше аватар
-    height: 35px;
-  }
-
-  .trainer-avatar__circle {
-    width: 35px;
-    height: 35px;
-    font-size: 8px; // Еще меньше текст
-  }
-
-  .trainer-info__name {
-    font-size: 10px; // Меньше имя
-  }
-
-  .trainer-info__income {
-    font-size: 10px; // Меньше доход
   }
 }
