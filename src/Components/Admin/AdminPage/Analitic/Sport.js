@@ -11,9 +11,7 @@ const getCurrentMonthAndYear = () => {
   return { month: months[date.getMonth()], year: date.getFullYear().toString() };
 };
 
-const sports = [
-  "ММА", "Кулату", "Бокс", "Борьба", "Тхэквондо", "Самбо", "Греко-римская борьба", "Кроссфит", "Дзюдо", "Кикбокс"
-];
+const sports = ["Кулату", "Бокс", "Борьба", "Тхэквондо", "Самбо", "Греко-римская борьба", "Кроссфит", "Дзюдо", "Кикбокс"];
 
 const Sport = () => {
   const [filters, setFilters] = useState(getCurrentMonthAndYear());
