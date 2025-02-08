@@ -118,9 +118,9 @@ const Login = () => {
     {loading ? "Вход..." : "Войти"}
   </button>
   
-  <Link to="register" className="login-form__link">
+{/*   <Link to="register" className="login-form__link">
     <p>Если еще нет аккаунта?</p>
-  </Link>
+  </Link> */}
 </form>
 
   );
